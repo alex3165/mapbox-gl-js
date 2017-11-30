@@ -1068,7 +1068,14 @@ class Map extends Camera {
      * @param id The ID of the image.
      */
     getImage(id: string) {
-        this.style.getImage(id);
+        if (!id) {
+            this.fire('error', {
+                error: new Error('Missing required image id')
+            });
+            return;
+        }
+
+        return this.style.getImage(id);
     }
 
     /**
