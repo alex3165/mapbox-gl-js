@@ -1067,7 +1067,7 @@ class Map extends Camera {
      *
      * @param id The ID of the image.
      */
-    getImage(id: string) {
+    getImage(id: string): ?StyleImage {
         if (!id) {
             this.fire('error', {
                 error: new Error('Missing required image id')
