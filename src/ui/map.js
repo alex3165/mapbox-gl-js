@@ -1063,6 +1063,15 @@ class Map extends Camera {
     }
 
     /**
+     * Get an image from the style (such as one used by `icon-image` or `background-pattern`).
+     *
+     * @param id The ID of the image.
+     */
+    getImage(id: string) {
+        this.style.getImage(id);
+    }
+
+    /**
      * Remove an image from the style (such as one used by `icon-image` or `background-pattern`).
      *
      * @param id The ID of the image.
